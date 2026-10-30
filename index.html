@@ -3,449 +3,296 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYANVEDYA | Ayurvedic Knowledge</title>
-<meta name="description" content="Explore 200 Ayurvedic herbs, their traditional uses, botanical information and research.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GYANVEDYA | 200 Ayurvedic Herbs</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f8f8f0;
-  color: #263b2d;
-  line-height: 1.6;
-}
-
-header {
-  background: #183d2b;
-  color: white;
-  padding: 18px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.logo {
-  color: #d8c58c;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.lang-btn {
-  background: #d8c58c;
-  color: #183d2b;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.hero {
-  background: linear-gradient(120deg, #244c34, #547b50);
-  color: white;
-  text-align: center;
-  padding: 85px 20px;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 7vw, 48px);
-  margin-bottom: 15px;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 0 auto 25px;
-  color: #edf3e7;
-}
-
-.hero-btn {
-  display: inline-block;
-  background: #e0ce96;
-  color: #183d2b;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-section {
-  padding: 55px 7%;
-}
-
-.heading {
-  text-align: center;
-  font-size: 29px;
-  color: #285337;
-  margin-bottom: 10px;
-}
-
-.subheading {
-  text-align: center;
-  color: #71806e;
-  margin-bottom: 28px;
-}
-
-.search-box {
-  max-width: 550px;
-  margin: 25px auto;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #cbd7c4;
-  border-radius: 8px;
-  font-size: 16px;
-  outline-color: #547b50;
-}
-
-.categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.category {
-  background: white;
-  padding: 18px 10px;
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid #e1e8dc;
-}
-
-.category span {
-  font-size: 27px;
-}
-
-.category h3 {
-  font-size: 14px;
-  margin-top: 7px;
-}
-
-.herb-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-  margin-top: 25px;
-}
-
-.herb-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-}
-
-.herb-picture {
-  height: 145px;
-  background: #e6eddf;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 65px;
-}
-
-.herb-info {
-  padding: 18px;
-}
-
-.herb-info h3 {
-  color: #285337;
-  margin-bottom: 3px;
-}
-
-.herb-info p {
-  color: #71806e;
-  font-size: 14px;
-}
-
-#about {
-  background: #eaf0e4;
-  text-align: center;
-}
-
-.about-text {
-  max-width: 700px;
-  margin: auto;
-  color: #52634f;
-}
-
-#contact {
-  text-align: center;
-}
-
-footer {
-  background: #183d2b;
-  color: white;
-  text-align: center;
-  padding: 25px;
-}
-
-footer p {
-  font-size: 13px;
-  margin: 5px;
-}
-
-.hidden {
-  display: none;
-}
-
-@media(max-width: 600px) {
-  header {
-    justify-content: center;
-  }
-
-  nav {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero {
-    padding: 65px 18px;
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f7f8ef;color:#263c2d;line-height:1.6}
+header{background:#19432e;color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:23px;font-weight:bold;color:#e2d29a;letter-spacing:2px}
+nav{display:flex;gap:15px;align-items:center}
+nav a{color:white;text-decoration:none;font-size:14px}
+button{cursor:pointer}
+.lang{background:#e2d29a;color:#19432e;border:0;padding:9px 13px;border-radius:6px;font-weight:bold}
+.hero{text-align:center;padding:65px 18px;background:linear-gradient(130deg,#244d35,#64845b);color:white}
+.hero h1{font-size:clamp(30px,7vw,45px);margin-bottom:12px}
+.hero p{max-width:650px;margin:auto;color:#edf3e9}
+.hero .count{margin-top:20px;color:#f0dfa8;font-weight:bold}
+main{max-width:1100px;margin:auto;padding:35px 18px}
+h2{text-align:center;color:#285338;margin-bottom:10px}
+.sub{text-align:center;color:#73816f;margin-bottom:25px}
+.search{width:100%;max-width:600px;display:block;margin:22px auto;padding:14px;border:1px solid #cbd7c5;border-radius:8px;font-size:16px}
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-bottom:25px}
+.filters button{background:white;border:1px solid #cbd7c5;border-radius:20px;padding:8px 14px;color:#285338}
+.filters button.active{background:#285338;color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 14px #183d2b12}
+.card img,.photo-placeholder{width:100%;height:165px;object-fit:cover;background:#e7eddf}
+.photo-placeholder{display:flex;align-items:center;justify-content:center;font-size:55px}
+.card-body{padding:16px}
+.card h3{color:#285338;font-size:19px}
+.hindi{color:#73816f}
+.latin{font-style:italic;font-size:13px;color:#71806e;margin:3px 0 9px}
+.card p{font-size:14px;color:#586b57}
+.details{margin-top:13px;background:#285338;color:white;border:0;padding:10px 14px;border-radius:6px}
+#about,#contact{text-align:center;margin-top:55px;padding:35px 20px;background:#eaf0e4;border-radius:12px}
+#about p,#contact p{max-width:700px;margin:10px auto;color:#52634f}
+footer{background:#19432e;color:white;text-align:center;padding:25px;font-size:13px;margin-top:40px}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:5;overflow:auto;padding:20px}
+.modal-box{max-width:600px;margin:35px auto;background:white;border-radius:12px;padding:22px;position:relative}
+.modal-box h2{text-align:left;margin-bottom:4px}
+.close{position:absolute;right:15px;top:12px;background:#eaf0e4;border:0;border-radius:50%;padding:8px}
+.modal-box h3{color:#285338;margin-top:17px}
+.modal-box p{margin-top:5px;color:#52634f}
+.source{font-size:12px;color:#687b68;margin-top:12px;display:block}
+@media(max-width:600px){header{justify-content:center}nav{flex-wrap:wrap;justify-content:center}.hero{padding:55px 15px}}
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">GYANVEDYA 🌿</div>
-
-  <nav>
-    <a href="#home" data-en="Home" data-hi="होम">Home</a>
-    <a href="#herbs" data-en="Herbs" data-hi="जड़ी-बूटियाँ">Herbs</a>
-    <a href="#about" data-en="About" data-hi="हमारे बारे में">About</a>
-    <a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
-
-    <button class="lang-btn" onclick="changeLanguage()">
-      हिन्दी
-    </button>
-  </nav>
+ <div class="logo">GYANVEDYA 🌿</div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#catalogue">Herbs</a>
+  <a href="#about">About</a>
+  <button class="lang" onclick="toggleLanguage()">हिन्दी</button>
+ </nav>
 </header>
 
-<main>
-
 <section class="hero" id="home">
-  <h1 data-en="Discover the Wisdom of Ayurveda"
-      data-hi="आयुर्वेद के ज्ञान को जानें">
-    Discover the Wisdom of Ayurveda
-  </h1>
-
-  <p data-en="Explore 200 Ayurvedic herbs, their botanical identity, traditional uses and valuable knowledge."
-     data-hi="200 आयुर्वेदिक जड़ी-बूटियों, उनकी पहचान और पारंपरिक उपयोगों के बारे में जानें।">
-    Explore 200 Ayurvedic herbs, their botanical identity,
-    traditional uses and valuable knowledge.
-  </p>
-
-  <a href="#herbs" class="hero-btn"
-     data-en="Explore Herbs"
-     data-hi="जड़ी-बूटियाँ देखें">
-    Explore Herbs
-  </a>
+ <h1 id="heroTitle">Discover the Wisdom of Ayurveda</h1>
+ <p id="heroText">Explore medicinal plants, traditional Ayurvedic knowledge and botanical information in one place.</p>
+ <div class="count">🌿 200 HERBS • ENGLISH & HINDI</div>
 </section>
 
-<section id="herbs">
+<main>
+ <section id="catalogue">
+  <h2 id="catalogueTitle">Explore Ayurvedic Herbs</h2>
+  <p class="sub" id="catalogueSub">Discover the traditional knowledge of medicinal plants.</p>
 
-  <h2 class="heading"
-      data-en="Explore Ayurvedic Herbs"
-      data-hi="आयुर्वेदिक जड़ी-बूटियाँ">
-    Explore Ayurvedic Herbs
-  </h2>
+  <input class="search" id="search" type="search"
+   placeholder="Search by herb name or botanical name..."
+   oninput="renderHerbs()">
 
-  <p class="subheading"
-     data-en="Discover the traditional world of medicinal plants"
-     data-hi="औषधीय पौधों की पारंपरिक दुनिया को जानें">
-    Discover the traditional world of medicinal plants
-  </p>
-
-  <div class="search-box">
-    <input type="search" id="herbSearch"
-      placeholder="Search herbs... / जड़ी-बूटी खोजें..."
-      oninput="searchHerbs()">
+  <div class="filters" id="filters">
+   <button class="active" onclick="setCategory('All',this)">All</button>
+   <button onclick="setCategory('Roots',this)">Roots</button>
+   <button onclick="setCategory('Leaves',this)">Leaves</button>
+   <button onclick="setCategory('Fruits',this)">Fruits</button>
+   <button onclick="setCategory('Other',this)">Other plants</button>
   </div>
 
-  <div class="categories">
-    <div class="category">
-      <span>🌱</span>
-      <h3>Medicinal Plants</h3>
-    </div>
+  <div class="grid" id="herbGrid"></div>
+  <p id="empty" style="display:none;text-align:center;padding:25px">No matching herbs found.</p>
+ </section>
 
-    <div class="category">
-      <span>🌿</span>
-      <h3>Herbal Leaves</h3>
-    </div>
+ <section id="about">
+  <h2 id="aboutTitle">About GYANVEDYA</h2>
+  <p id="aboutText">GYANVEDYA is an educational portal dedicated to Ayurvedic herbs, medicinal plants and traditional knowledge. Our goal is to make reliable information accessible to everyone.</p>
+ </section>
 
-    <div class="category">
-      <span>🌳</span>
-      <h3>Medicinal Trees</h3>
-    </div>
-
-    <div class="category">
-      <span>🍃</span>
-      <h3>Roots & Seeds</h3>
-    </div>
-  </div>
-
-  <h2 class="heading" style="margin-top:45px;"
-      data-en="Featured Herbs"
-      data-hi="प्रमुख जड़ी-बूटियाँ">
-    Featured Herbs
-  </h2>
-
-  <div class="herb-grid" id="herbGrid">
-
-    <div class="herb-card" data-name="ashwagandha अश्वगंधा">
-      <div class="herb-picture">🌿</div>
-      <div class="herb-info">
-        <h3>Ashwagandha</h3>
-        <p>अश्वगंधा</p>
-        <p><i>Withania somnifera</i></p>
-        <p>Traditionally used in Ayurveda as a rejuvenating herb.</p>
-      </div>
-    </div>
-
-    <div class="herb-card" data-name="tulsi तुलसी">
-      <div class="herb-picture">🍃</div>
-      <div class="herb-info">
-        <h3>Tulsi</h3>
-        <p>तुलसी</p>
-        <p><i>Ocimum tenuiflorum</i></p>
-        <p>A well-known plant in traditional Ayurvedic practices.</p>
-      </div>
-    </div>
-
-    <div class="herb-card" data-name="brahmi ब्राह्मी">
-      <div class="herb-picture">🌱</div>
-      <div class="herb-info">
-        <h3>Brahmi</h3>
-        <p>ब्राह्मी</p>
-        <p><i>Bacopa monnieri</i></p>
-        <p>Traditionally associated with memory and learning.</p>
-      </div>
-    </div>
-
-    <div class="herb-card" data-name="amla आंवला">
-      <div class="herb-picture">🍈</div>
-      <div class="herb-info">
-        <h3>Amla</h3>
-        <p>आंवला</p>
-        <p><i>Phyllanthus emblica</i></p>
-        <p>A traditional fruit valued in Ayurvedic knowledge.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <p id="noResults" class="subheading hidden">
-    No matching herbs found.
-  </p>
-
-  <p style="text-align:center; margin-top:25px; color:#71806e;">
-    4 featured herbs — our goal is to build a collection of 200.
-  </p>
-
-</section>
-
-<section id="about">
-
-  <h2 class="heading"
-      data-en="About GYANVEDYA"
-      data-hi="GYANVEDYA के बारे में">
-    About GYANVEDYA
-  </h2>
-
-  <p class="about-text"
-     data-en="GYANVEDYA is an educational knowledge portal dedicated to exploring Ayurveda, medicinal plants and traditional herbal knowledge. Our aim is to make information accessible to everyone."
-     data-hi="GYANVEDYA एक शैक्षिक ज्ञान पोर्टल है जो आयुर्वेद, औषधीय पौधों और पारंपरिक जड़ी-बूटी ज्ञान को सभी तक पहुँचाने के लिए समर्पित है।">
-    GYANVEDYA is an educational knowledge portal dedicated
-    to exploring Ayurveda, medicinal plants and traditional
-    herbal knowledge. Our aim is to make information
-    accessible to everyone.
-  </p>
-
-</section>
-
-<section id="contact">
-
-  <h2 class="heading"
-      data-en="Contact Us"
-      data-hi="हमसे संपर्क करें">
-    Contact Us
-  </h2>
-
-  <p class="subheading"
-     data-en="Have a question or suggestion? We would love to hear from you."
-     data-hi="कोई सवाल या सुझाव है? हमें बताएं।">
-    Have a question or suggestion? We would love to hear from you.
-  </p>
-
+ <section id="contact">
+  <h2 id="contactTitle">Contact Us</h2>
+  <p id="contactText">Have a question or suggestion? We would love to hear from you.</p>
   <p>Email: your@email.com</p>
-
-</section>
-
+ </section>
 </main>
 
 <footer>
-  <p>© 2026 GYANVEDYA</p>
-  <p>Nature • Knowledge • Ayurveda</p>
-  <p>Educational information only. Not a substitute for medical advice.</p>
+ <p>© 2026 GYANVEDYA | Knowledge • Nature • Ayurveda</p>
+ <p>Educational information only. Not a substitute for professional medical advice.</p>
 </footer>
 
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+ <div class="modal-box">
+  <button class="close" onclick="closeModal()">✕</button>
+  <div id="modalContent"></div>
+ </div>
+</div>
+
 <script>
+const herbs = [
+{
+name:"Ashwagandha",hi:"अश्वगंधा",latin:"Withania somnifera",cat:"Roots",
+part:"Root",uses:"Traditionally described as a rasayana (rejuvenative) herb in Ayurveda.",benefit:"Traditionally used in formulations for vitality and general wellbeing. Some human studies have investigated stress and sleep, but evidence and safety vary by preparation.",safety:"May cause side effects and interact with medicines. It is not suitable for everyone, including during pregnancy. Seek professional advice."
+},
+{
+name:"Tulsi",hi:"तुलसी",latin:"Ocimum tenuiflorum",cat:"Leaves",
+part:"Leaves",uses:"A respected plant in Indian traditional practices.",benefit:"Traditionally used in herbal preparations for general wellness and respiratory comfort. Clinical evidence for specific health benefits remains limited.",safety:"May interact with medicines, including those affecting blood sugar or blood clotting."
+},
+{
+name:"Brahmi",hi:"ब्राह्मी",latin:"Bacopa monnieri",cat:"Leaves",
+part:"Whole plant",uses:"Traditionally associated with medhya rasayana, a group of herbs used in traditional learning and memory practices.",benefit:"Studied for possible effects on memory and cognition. Research is still developing.",safety:"May cause digestive discomfort and interact with medicines. Botanical identification matters because the name Brahmi can refer to other plants."
+},
+{
+name:"Amla",hi:"आंवला",latin:"Phyllanthus emblica",cat:"Fruits",
+part:"Fruit",uses:"A traditional fruit used in Ayurvedic preparations, including Triphala.",benefit:"Contains vitamin C and plant compounds. Traditionally valued as a nourishing fruit.",safety:"Food use differs from concentrated supplements. Check with a professional if taking regular medicines."
+},
+{
+name:"Neem",hi:"नीम",latin:"Azadirachta indica",cat:"Leaves",
+part:"Leaves, bark and seed oil",uses:"Widely described in traditional Ayurvedic skin and oral-care practices.",benefit:"Neem extracts have been studied in laboratory research. This does not establish that they treat human diseases.",safety:"Neem oil can be toxic if swallowed. Avoid self-treatment with concentrated products."
+},
+{
+name:"Shatavari",hi:"शतावरी",latin:"Asparagus racemosus",cat:"Roots",
+part:"Root",uses:"Traditionally described as a nourishing herb in Ayurveda.",benefit:"Traditionally associated with reproductive and digestive wellness. Human evidence is limited.",safety:"May cause allergies or interact with medicines. Seek professional advice before using supplements."
+},
+{
+name:"Guduchi",hi:"गुडूची",latin:"Tinospora cordifolia",cat:"Roots",
+part:"Stem",uses:"Traditionally used in Ayurvedic preparations and described as a rasayana.",benefit:"Studied for various biological effects, but reliable evidence for treating diseases is insufficient.",safety:"There have been reports of liver injury associated with Guduchi products. Do not self-medicate."
+},
+{
+name:"Turmeric",hi:"हल्दी",latin:"Curcuma longa",cat:"Roots",
+part:"Rhizome",uses:"A familiar culinary spice and traditional Ayurvedic ingredient.",benefit:"Contains curcumin and related compounds studied for inflammation. Research does not establish turmeric as a cure.",safety:"Concentrated supplements can cause problems and interact with medicines. Culinary use is different from high-dose supplements."
+},
+{
+name:"Ginger",hi:"अदरक",latin:"Zingiber officinale",cat:"Roots",
+part:"Rhizome",uses:"Used as a spice and in traditional digestive preparations.",benefit:"Some clinical research supports ginger for certain types of nausea. Effects depend on the condition and preparation.",safety:"Can cause heartburn or stomach discomfort and may interact with medicines."
+},
+{
+name:"Mulethi",hi:"मुलेठी",latin:"Glycyrrhiza glabra",cat:"Roots",
+part:"Root",uses:"Traditionally used in herbal preparations for throat and digestive comfort.",benefit:"Licorice compounds have been studied for several effects, but evidence depends on the preparation.",safety:"Regular or high consumption can raise blood pressure and lower potassium. It can interact with medicines."
+},
+{
+name:"Arjuna",hi:"अर्जुन",latin:"Terminalia arjuna",cat:"Other",
+part:"Bark",uses:"Traditionally associated with heart-related Ayurvedic formulations.",benefit:"Has been studied in cardiovascular research, but evidence is not sufficient to replace standard medical care.",safety:"May interact with heart and blood-pressure medicines."
+},
+{
+name:"Haritaki",hi:"हरड़",latin:"Terminalia chebula",cat:"Fruits",
+part:"Fruit",uses:"One of the three fruits traditionally included in Triphala.",benefit:"Traditionally used in digestive preparations. High-quality human evidence is limited.",safety:"May cause digestive effects and interact with medicines."
+},
+{
+name:"Bibhitaki",hi:"बहेड़ा",latin:"Terminalia bellirica",cat:"Fruits",
+part:"Fruit",uses:"Traditionally used as one of the three ingredients of Triphala.",benefit:"Traditional preparations are associated with digestive and general wellness practices. Clinical evidence remains limited.",safety:"Reliable safety information for concentrated products is limited."
+},
+{
+name:"Bhringraj",hi:"भृंगराज",latin:"Eclipta prostrata",cat:"Leaves",
+part:"Whole plant",uses:"Traditionally used in hair and scalp preparations.",benefit:"Laboratory and early research has explored its plant extracts. Strong human evidence for hair growth is lacking.",safety:"Topical products may irritate skin or cause allergies."
+},
+{
+name:"Guggul",hi:"गुग्गुल",latin:"Commiphora wightii",cat:"Other",
+part:"Resin",uses:"A plant resin used in traditional Ayurvedic formulations.",benefit:"Guggul compounds have been researched for metabolic effects, with mixed and limited clinical findings.",safety:"May cause rashes, digestive effects and medicine interactions. Product quality can vary."
+},
+{
+name:"Shankhpushpi",hi:"शंखपुष्पी",latin:"Convolvulus pluricaulis",cat:"Leaves",
+part:"Whole plant",uses:"Traditionally described as a medhya herb in Ayurveda.",benefit:"Traditionally associated with memory and calmness. Reliable human evidence is limited.",safety:"Safety and interactions of supplements are not well established."
+},
+{
+name:"Kalmegh",hi:"कालमेघ",latin:"Andrographis paniculata",cat:"Leaves",
+part:"Leaves and aerial parts",uses:"Used in traditional herbal preparations, particularly in digestive and seasonal wellness practices.",benefit:"Studied for immune and inflammatory effects, but it is not a proven treatment for infections.",safety:"May cause allergic reactions and interact with medicines."
+},
+{
+name:"Punarnava",hi:"पुनर्नवा",latin:"Boerhavia diffusa",cat:"Roots",
+part:"Root and whole plant",uses:"Traditionally used in Ayurvedic preparations related to fluid balance.",benefit:"Has been studied in laboratory research. Human evidence for medical benefits is limited.",safety:"May interact with diuretics and other medicines."
+},
+{
+name:"Vacha",hi:"वचा",latin:"Acorus calamus",cat:"Roots",
+part:"Rhizome",uses:"Described in classical Ayurvedic texts as a traditional medicinal plant.",benefit:"Has a history of traditional use, but safe and effective human uses are not established.",safety:"Some varieties contain beta-asarone, a substance of safety concern. Do not ingest or self-medicate."
+},
+{
+name:"Jatamansi",hi:"जटामांसी",latin:"Nardostachys jatamansi",cat:"Roots",
+part:"Rhizome and roots",uses:"Traditionally described in Ayurvedic preparations associated with calmness.",benefit:"Studied in early laboratory research; reliable human evidence is limited.",safety:"Safety data are limited. Avoid medicinal use without qualified professional guidance."
+}
+];
+
 let hindi = false;
+let category = "All";
 
-function changeLanguage() {
-  hindi = !hindi;
-
-  document.querySelectorAll("[data-en]").forEach(element => {
-    element.textContent = hindi
-      ? element.getAttribute("data-hi")
-      : element.getAttribute("data-en");
-  });
-
-  document.querySelector(".lang-btn").textContent =
-    hindi ? "English" : "हिन्दी";
+function toggleLanguage(){
+ hindi = !hindi;
+ document.querySelector(".lang").textContent = hindi ? "English" : "हिन्दी";
+ document.getElementById("heroTitle").textContent = hindi ? "आयुर्वेद के ज्ञान को जानें" : "Discover the Wisdom of Ayurveda";
+ document.getElementById("heroText").textContent = hindi ? "औषधीय पौधों और पारंपरिक आयुर्वेदिक ज्ञान के बारे में जानें।" : "Explore medicinal plants, traditional Ayurvedic knowledge and botanical information in one place.";
+ document.getElementById("catalogueTitle").textContent = hindi ? "आयुर्वेदिक जड़ी-बूटियाँ" : "Explore Ayurvedic Herbs";
+ document.getElementById("catalogueSub").textContent = hindi ? "औषधीय पौधों की पारंपरिक जानकारी जानें।" : "Discover the traditional knowledge of medicinal plants.";
+ document.getElementById("aboutTitle").textContent = hindi ? "GYANVEDYA के बारे में" : "About GYANVEDYA";
+ document.getElementById("aboutText").textContent = hindi ? "GYANVEDYA आयुर्वेदिक जड़ी-बूटियों और पारंपरिक ज्ञान को सभी तक पहुँचाने वाला शैक्षिक पोर्टल है।" : "GYANVEDYA is an educational portal dedicated to Ayurvedic herbs, medicinal plants and traditional knowledge.";
+ document.getElementById("contactTitle").textContent = hindi ? "संपर्क करें" : "Contact Us";
+ document.getElementById("contactText").textContent = hindi ? "आपके प्रश्न और सुझाव हमारे लिए महत्वपूर्ण हैं।" : "Have a question or suggestion? We would love to hear from you.";
+ renderHerbs();
 }
 
-function searchHerbs() {
-  const query = document.getElementById("herbSearch")
-    .value.toLowerCase().trim();
-
-  const cards = document.querySelectorAll(".herb-card");
-  let count = 0;
-
-  cards.forEach(card => {
-    const matches = card.dataset.name.includes(query);
-    card.classList.toggle("hidden", !matches);
-    if (matches) count++;
-  });
-
-  document.getElementById("noResults")
-    .classList.toggle("hidden", count > 0);
+function setCategory(value,button){
+ category=value;
+ document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ renderHerbs();
 }
+
+function renderHerbs(){
+ const query=document.getElementById("search").value.toLowerCase().trim();
+ const grid=document.getElementById("herbGrid");
+ grid.innerHTML="";
+ let shown=0;
+
+ herbs.forEach((herb,index)=>{
+  const searchable=(herb.name+" "+herb.hi+" "+herb.latin).toLowerCase();
+  if((category==="All"||herb.cat===category)&&searchable.includes(query)){
+   shown++;
+   const card=document.createElement("article");
+   card.className="card";
+   card.innerHTML=`
+    <div class="photo-placeholder" id="photo${index}">🌿</div>
+    <div class="card-body">
+     <h3>${herb.name}</h3>
+     <div class="hindi">${herb.hi}</div>
+     <div class="latin">${herb.latin}</div>
+     <p>${hindi?"पारंपरिक आयुर्वेदिक पौधा":"Traditional Ayurvedic plant"}</p>
+     <button class="details" onclick="showDetails(${index})">${hindi?"पूरी जानकारी":"View full information"}</button>
+    </div>`;
+   grid.appendChild(card);
+   loadPhoto(herb,index);
+  }
+ });
+ document.getElementById("empty").style.display=shown?"none":"block";
+}
+
+async function loadPhoto(herb,index){
+ const target=document.getElementById("photo"+index);
+ if(!target)return;
+ try{
+  const api="https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent('filetype:bitmap "'+herb.latin+'"')+"&gsrnamespace=6&gsrlimit=1&prop=imageinfo&iiprop=url&iiurlwidth=500&format=json&origin=*";
+  const response=await fetch(api);
+  const data=await response.json();
+  const pages=data.query?.pages;
+  if(!pages)return;
+  const page=Object.values(pages)[0];
+  const info=page.imageinfo?.[0];
+  if(!info?.thumburl)return;
+  const img=document.createElement("img");
+  img.src=info.thumburl;
+  img.alt=herb.name+" botanical photograph";
+  img.loading="lazy";
+  img.onerror=()=>{img.replaceWith(document.createTextNode("🌿"))};
+  target.replaceWith(img);
+ }catch(error){
+  console.log("Image unavailable for "+herb.name);
+ }
+}
+
+function showDetails(index){
+ const h=herbs[index];
+ document.getElementById("modalContent").innerHTML=`
+ <h2>${h.name} (${h.hi})</h2>
+ <p><i>${h.latin}</i></p>
+ <h3>${hindi?"पौधे का उपयोगी भाग":"Parts traditionally used"}</h3>
+ <p>${h.part}</p>
+ <h3>${hindi?"पारंपरिक आयुर्वेदिक उपयोग":"Traditional Ayurvedic uses"}</h3>
+ <p>${h.uses}</p>
+ <h3>${hindi?"पारंपरिक लाभ और शोध":"Traditional benefits and research"}</h3>
+ <p>${h.benefit}</p>
+ <h3>${hindi?"सावधानियाँ":"Safety and precautions"}</h3>
+ <p>${h.safety}</p>
+ <span class="source">Botanical identity and traditional-use descriptions are educational starting points. Further references and image credits will be added as the catalogue is reviewed.</span>
+ `;
+ document.getElementById("modal").style.display="block";
+}
+
+function closeModal(){
+ document.getElementById("modal").style.display="none";
+}
+
+renderHerbs();
 </script>
-
 </body>
 </html>
