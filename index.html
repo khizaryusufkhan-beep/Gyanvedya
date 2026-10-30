@@ -113,86 +113,132 @@ footer{background:#19432e;color:white;text-align:center;padding:25px;font-size:1
 
 <script>
 const herbs = [
-{
-name:"Ashwagandha",hi:"अश्वगंधा",latin:"Withania somnifera",cat:"Roots",
-part:"Root",uses:"Traditionally described as a rasayana (rejuvenative) herb in Ayurveda.",benefit:"Traditionally used in formulations for vitality and general wellbeing. Some human studies have investigated stress and sleep, but evidence and safety vary by preparation.",safety:"May cause side effects and interact with medicines. It is not suitable for everyone, including during pregnancy. Seek professional advice."
-},
-{
-name:"Tulsi",hi:"तुलसी",latin:"Ocimum tenuiflorum",cat:"Leaves",
-part:"Leaves",uses:"A respected plant in Indian traditional practices.",benefit:"Traditionally used in herbal preparations for general wellness and respiratory comfort. Clinical evidence for specific health benefits remains limited.",safety:"May interact with medicines, including those affecting blood sugar or blood clotting."
-},
-{
-name:"Brahmi",hi:"ब्राह्मी",latin:"Bacopa monnieri",cat:"Leaves",
-part:"Whole plant",uses:"Traditionally associated with medhya rasayana, a group of herbs used in traditional learning and memory practices.",benefit:"Studied for possible effects on memory and cognition. Research is still developing.",safety:"May cause digestive discomfort and interact with medicines. Botanical identification matters because the name Brahmi can refer to other plants."
-},
-{
-name:"Amla",hi:"आंवला",latin:"Phyllanthus emblica",cat:"Fruits",
-part:"Fruit",uses:"A traditional fruit used in Ayurvedic preparations, including Triphala.",benefit:"Contains vitamin C and plant compounds. Traditionally valued as a nourishing fruit.",safety:"Food use differs from concentrated supplements. Check with a professional if taking regular medicines."
-},
-{
-name:"Neem",hi:"नीम",latin:"Azadirachta indica",cat:"Leaves",
-part:"Leaves, bark and seed oil",uses:"Widely described in traditional Ayurvedic skin and oral-care practices.",benefit:"Neem extracts have been studied in laboratory research. This does not establish that they treat human diseases.",safety:"Neem oil can be toxic if swallowed. Avoid self-treatment with concentrated products."
-},
-{
-name:"Shatavari",hi:"शतावरी",latin:"Asparagus racemosus",cat:"Roots",
-part:"Root",uses:"Traditionally described as a nourishing herb in Ayurveda.",benefit:"Traditionally associated with reproductive and digestive wellness. Human evidence is limited.",safety:"May cause allergies or interact with medicines. Seek professional advice before using supplements."
-},
-{
-name:"Guduchi",hi:"गुडूची",latin:"Tinospora cordifolia",cat:"Roots",
-part:"Stem",uses:"Traditionally used in Ayurvedic preparations and described as a rasayana.",benefit:"Studied for various biological effects, but reliable evidence for treating diseases is insufficient.",safety:"There have been reports of liver injury associated with Guduchi products. Do not self-medicate."
-},
-{
-name:"Turmeric",hi:"हल्दी",latin:"Curcuma longa",cat:"Roots",
-part:"Rhizome",uses:"A familiar culinary spice and traditional Ayurvedic ingredient.",benefit:"Contains curcumin and related compounds studied for inflammation. Research does not establish turmeric as a cure.",safety:"Concentrated supplements can cause problems and interact with medicines. Culinary use is different from high-dose supplements."
-},
-{
-name:"Ginger",hi:"अदरक",latin:"Zingiber officinale",cat:"Roots",
-part:"Rhizome",uses:"Used as a spice and in traditional digestive preparations.",benefit:"Some clinical research supports ginger for certain types of nausea. Effects depend on the condition and preparation.",safety:"Can cause heartburn or stomach discomfort and may interact with medicines."
-},
-{
-name:"Mulethi",hi:"मुलेठी",latin:"Glycyrrhiza glabra",cat:"Roots",
-part:"Root",uses:"Traditionally used in herbal preparations for throat and digestive comfort.",benefit:"Licorice compounds have been studied for several effects, but evidence depends on the preparation.",safety:"Regular or high consumption can raise blood pressure and lower potassium. It can interact with medicines."
-},
-{
-name:"Arjuna",hi:"अर्जुन",latin:"Terminalia arjuna",cat:"Other",
-part:"Bark",uses:"Traditionally associated with heart-related Ayurvedic formulations.",benefit:"Has been studied in cardiovascular research, but evidence is not sufficient to replace standard medical care.",safety:"May interact with heart and blood-pressure medicines."
-},
-{
-name:"Haritaki",hi:"हरड़",latin:"Terminalia chebula",cat:"Fruits",
-part:"Fruit",uses:"One of the three fruits traditionally included in Triphala.",benefit:"Traditionally used in digestive preparations. High-quality human evidence is limited.",safety:"May cause digestive effects and interact with medicines."
-},
-{
-name:"Bibhitaki",hi:"बहेड़ा",latin:"Terminalia bellirica",cat:"Fruits",
-part:"Fruit",uses:"Traditionally used as one of the three ingredients of Triphala.",benefit:"Traditional preparations are associated with digestive and general wellness practices. Clinical evidence remains limited.",safety:"Reliable safety information for concentrated products is limited."
-},
-{
-name:"Bhringraj",hi:"भृंगराज",latin:"Eclipta prostrata",cat:"Leaves",
-part:"Whole plant",uses:"Traditionally used in hair and scalp preparations.",benefit:"Laboratory and early research has explored its plant extracts. Strong human evidence for hair growth is lacking.",safety:"Topical products may irritate skin or cause allergies."
-},
-{
-name:"Guggul",hi:"गुग्गुल",latin:"Commiphora wightii",cat:"Other",
-part:"Resin",uses:"A plant resin used in traditional Ayurvedic formulations.",benefit:"Guggul compounds have been researched for metabolic effects, with mixed and limited clinical findings.",safety:"May cause rashes, digestive effects and medicine interactions. Product quality can vary."
-},
-{
-name:"Shankhpushpi",hi:"शंखपुष्पी",latin:"Convolvulus pluricaulis",cat:"Leaves",
-part:"Whole plant",uses:"Traditionally described as a medhya herb in Ayurveda.",benefit:"Traditionally associated with memory and calmness. Reliable human evidence is limited.",safety:"Safety and interactions of supplements are not well established."
-},
-{
-name:"Kalmegh",hi:"कालमेघ",latin:"Andrographis paniculata",cat:"Leaves",
-part:"Leaves and aerial parts",uses:"Used in traditional herbal preparations, particularly in digestive and seasonal wellness practices.",benefit:"Studied for immune and inflammatory effects, but it is not a proven treatment for infections.",safety:"May cause allergic reactions and interact with medicines."
-},
-{
-name:"Punarnava",hi:"पुनर्नवा",latin:"Boerhavia diffusa",cat:"Roots",
-part:"Root and whole plant",uses:"Traditionally used in Ayurvedic preparations related to fluid balance.",benefit:"Has been studied in laboratory research. Human evidence for medical benefits is limited.",safety:"May interact with diuretics and other medicines."
-},
-{
-name:"Vacha",hi:"वचा",latin:"Acorus calamus",cat:"Roots",
-part:"Rhizome",uses:"Described in classical Ayurvedic texts as a traditional medicinal plant.",benefit:"Has a history of traditional use, but safe and effective human uses are not established.",safety:"Some varieties contain beta-asarone, a substance of safety concern. Do not ingest or self-medicate."
-},
-{
-name:"Jatamansi",hi:"जटामांसी",latin:"Nardostachys jatamansi",cat:"Roots",
-part:"Rhizome and roots",uses:"Traditionally described in Ayurvedic preparations associated with calmness.",benefit:"Studied in early laboratory research; reliable human evidence is limited.",safety:"Safety data are limited. Avoid medicinal use without qualified professional guidance."
-}
+{name:"Ashwagandha",hi:"अश्वगंधा",latin:"Withania somnifera",part:"Root",cat:"Roots",uses:"Traditionally used in Ayurveda as a rasayana.",benefit:"Traditionally associated with vitality and wellbeing.",safety:"May interact with medicines. Avoid self-medication."},
+{name:"Tulsi",hi:"तुलसी",latin:"Ocimum tenuiflorum",part:"Leaves",cat:"Leaves",uses:"Traditionally used in herbal preparations for general wellness.",benefit:"Aromatic leaves contain naturally occurring plant compounds.",safety:"May affect blood sugar or blood clotting. Seek professional advice."},
+{name:"Brahmi",hi:"ब्राह्मी",latin:"Bacopa monnieri",part:"Whole plant",cat:"Other",uses:"Traditionally used in Ayurvedic preparations for memory and learning.",benefit:"Studied for possible effects on cognitive function; evidence is still developing.",safety:"May cause digestive effects and interact with medicines."},
+{name:"Amla",hi:"आंवला",latin:"Phyllanthus emblica",part:"Fruit",cat:"Fruits",uses:"Traditionally used as a rasayana and in food preparations.",benefit:"A fruit containing vitamin C and plant antioxidants.",safety:"May interact with some medicines. Food use differs from concentrated extracts."},
+{name:"Neem",hi:"नीम",latin:"Azadirachta indica",part:"Leaves and bark",cat:"Leaves",uses:"Traditionally used in skin and oral-care preparations.",benefit:"Contains several studied plant compounds.",safety:"Neem oil can be toxic if swallowed. Avoid self-treatment."},
+{name:"Shatavari",hi:"शतावरी",latin:"Asparagus racemosus",part:"Root",cat:"Roots",uses:"Traditionally used in Ayurvedic women's wellness preparations.",benefit:"Traditionally described as a nourishing plant.",safety:"May cause allergies or interact with medicines."},
+{name:"Guduchi",hi:"गुडूची",latin:"Tinospora cordifolia",part:"Stem",cat:"Other",uses:"Traditionally used in Ayurvedic formulations.",benefit:"Studied for its plant compounds; benefits are not established.",safety:"There are reports of liver injury. Do not use without medical advice."},
+{name:"Turmeric",hi:"हल्दी",latin:"Curcuma longa",part:"Rhizome",cat:"Roots",uses:"Used as a spice and traditionally in skin and wellness preparations.",benefit:"Contains curcumin, which is widely studied.",safety:"Concentrated supplements may interact with medicines."},
+{name:"Ginger",hi:"अदरक",latin:"Zingiber officinale",part:"Rhizome",cat:"Roots",uses:"Used as food and traditionally for digestive comfort.",benefit:"Contains gingerols and other natural compounds.",safety:"Large supplemental amounts may interact with blood-thinning medicines."},
+{name:"Mulethi",hi:"मुलेठी",latin:"Glycyrrhiza glabra",part:"Root",cat:"Roots",uses:"Traditionally used in throat and herbal preparations.",benefit:"Contains glycyrrhizin and other plant compounds.",safety:"Can affect blood pressure and potassium levels. Avoid unsupervised use."},
+{name:"Arjuna",hi:"अर्जुन",latin:"Terminalia arjuna",part:"Bark",cat:"Other",uses:"Traditionally used in Ayurvedic heart-health formulations.",benefit:"Studied for its bark compounds; clinical evidence is limited.",safety:"May interact with heart and blood-pressure medicines."},
+{name:"Haritaki",hi:"हरितकी",latin:"Terminalia chebula",part:"Fruit",cat:"Fruits",uses:"Traditionally used in Triphala and digestive preparations.",benefit:"Contains tannins and other plant compounds.",safety:"May cause digestive effects and interact with medicines."},
+{name:"Bibhitaki",hi:"बिभीतकी",latin:"Terminalia bellirica",part:"Fruit",cat:"Fruits",uses:"Traditionally used as one ingredient in Triphala.",benefit:"Its fruit contains naturally occurring tannins.",safety:"Safety of concentrated preparations is not well established."},
+{name:"Bhringraj",hi:"भृंगराज",latin:"Eclipta prostrata",part:"Whole plant",cat:"Other",uses:"Traditionally used in hair and scalp preparations.",benefit:"Contains plant compounds studied in laboratory research.",safety:"Evidence for hair-growth claims is limited. Avoid unverified products."},
+{name:"Guggul",hi:"गुग्गुल",latin:"Commiphora wightii",part:"Resin",cat:"Other",uses:"Traditionally used in Ayurvedic formulations.",benefit:"Its resin contains guggulsterones, which have been studied.",safety:"May interact with medicines and cause side effects."},
+{name:"Shankhpushpi",hi:"शंखपुष्पी",latin:"Convolvulus pluricaulis",part:"Whole plant",cat:"Other",uses:"Traditionally used in memory and calming preparations.",benefit:"Traditional claims need more reliable human research.",safety:"Product identity and safety can vary. Avoid self-medication."},
+{name:"Kalmegh",hi:"कालमेघ",latin:"Andrographis paniculata",part:"Leaves and aerial parts",cat:"Leaves",uses:"Traditionally used in bitter herbal preparations.",benefit:"Contains andrographolides, studied in research.",safety:"May cause allergic reactions and interact with medicines."},
+{name:"Punarnava",hi:"पुनर्नवा",latin:"Boerhavia diffusa",part:"Root",cat:"Roots",uses:"Traditionally used in Ayurvedic formulations.",benefit:"Contains plant compounds being studied by researchers.",safety:"May affect fluid balance or interact with medicines."},
+{name:"Vacha",hi:"वचा",latin:"Acorus calamus",part:"Rhizome",cat:"Roots",uses:"Mentioned in traditional Ayurvedic texts.",benefit:"Historically valued in traditional herbal practice.",safety:"Some varieties contain beta-asarone, a safety concern. Do not consume."},
+{name:"Jatamansi",hi:"जटामांसी",latin:"Nardostachys jatamansi",part:"Rhizome and roots",cat:"Roots",uses:"Traditionally used in aromatic and calming preparations.",benefit:"Its aromatic compounds have been studied in early research.",safety:"Safety data are limited. Avoid unsupervised use."},
+{name:"Mandukaparni",hi:"मंडूकपर्णी",latin:"Centella asiatica",part:"Leaves and whole plant",cat:"Leaves",uses:"Traditionally used in skin and wellness preparations.",benefit:"Contains triterpenoids studied in laboratory research.",safety:"Rare liver-related side effects have been reported with supplements."},
+{name:"Bael",hi:"बेल",latin:"Aegle marmelos",part:"Fruit",cat:"Fruits",uses:"Fruit used traditionally in food and digestive preparations.",benefit:"Contains fibre and various plant compounds.",safety:"Concentrated products may affect blood sugar."},
+{name:"Moringa",hi:"सहजन",latin:"Moringa oleifera",part:"Leaves and pods",cat:"Leaves",uses:"Leaves and pods are used as food; also used traditionally.",benefit:"Leaves provide nutrients and plant antioxidants.",safety:"Food use is different from extracts. Some parts may interact with medicines."},
+{name:"Aloe vera",hi:"घृतकुमारी",latin:"Aloe vera",part:"Inner leaf gel",cat:"Leaves",uses:"Gel is traditionally used in topical skin preparations.",benefit:"The inner gel contains water and polysaccharides.",safety:"Do not swallow aloe latex. Topical products may cause irritation."},
+{name:"Spearmint",hi:"पुदीना",latin:"Mentha spicata",part:"Leaves",cat:"Leaves",uses:"Used in food, drinks and traditional digestive preparations.",benefit:"Aromatic leaves contain essential oils.",safety:"May cause allergy or reflux in some people."},
+{name:"Fennel",hi:"सौंफ",latin:"Foeniculum vulgare",part:"Seeds",cat:"Other",uses:"Used as a culinary spice and traditionally after meals.",benefit:"Seeds contain aromatic oils.",safety:"May cause allergy. Concentrated oils are not suitable for self-use."},
+{name:"Cumin",hi:"जीरा",latin:"Cuminum cyminum",part:"Seeds",cat:"Other",uses:"Common culinary spice also used in traditional preparations.",benefit:"Contains aromatic compounds and small amounts of nutrients.",safety:"Normal food amounts are different from concentrated supplements."},
+{name:"Coriander",hi:"धनिया",latin:"Coriandrum sativum",part:"Seeds and leaves",cat:"Leaves",uses:"Used widely as a culinary herb and spice.",benefit:"Provides flavour and naturally occurring plant compounds.",safety:"May cause allergy in sensitive individuals."},
+{name:"Fenugreek",hi:"मेथी",latin:"Trigonella foenum-graecum",part:"Seeds and leaves",cat:"Other",uses:"Used as food and traditionally in wellness preparations.",benefit:"Seeds contain fibre and plant compounds.",safety:"May lower blood sugar and interact with medicines."},
+{name:"Garlic",hi:"लहसुन",latin:"Allium sativum",part:"Bulb",cat:"Other",uses:"Used as food and in traditional preparations.",benefit:"Contains sulfur compounds such as allicin.",safety:"Supplements may increase bleeding risk and interact with medicines."},
+{name:"Onion",hi:"प्याज",latin:"Allium cepa",part:"Bulb",cat:"Other",uses:"Common food plant used in many cuisines.",benefit:"Contains quercetin and other plant compounds.",safety:"May cause digestive discomfort in some people."},
+{name:"Black pepper",hi:"काली मिर्च",latin:"Piper nigrum",part:"Fruit",cat:"Fruits",uses:"Used as a spice and traditionally in herbal mixtures.",benefit:"Contains piperine, a studied plant compound.",safety:"Piperine can change how some medicines are absorbed."},
+{name:"Long pepper",hi:"पिप्पली",latin:"Piper longum",part:"Fruit",cat:"Fruits",uses:"Traditionally used as a spice and in Ayurvedic formulations.",benefit:"Contains piperine-related compounds.",safety:"May interact with medicines. Avoid concentrated products without advice."},
+{name:"Cardamom",hi:"इलायची",latin:"Elettaria cardamomum",part:"Seeds",cat:"Other",uses:"Used as a culinary spice and in traditional preparations.",benefit:"Aromatic seeds contain essential oils.",safety:"Food amounts are generally different from concentrated extracts."},
+{name:"Cinnamon",hi:"दालचीनी",latin:"Cinnamomum verum",part:"Bark",cat:"Other",uses:"Used as a spice and traditionally in food preparations.",benefit:"Contains aromatic compounds such as cinnamaldehyde.",safety:"Large amounts of some cinnamon products may affect the liver."},
+{name:"Clove",hi:"लौंग",latin:"Syzygium aromaticum",part:"Flower buds",cat:"Other",uses:"Used as a spice and traditionally in oral-care preparations.",benefit:"Contains eugenol, an aromatic compound.",safety:"Clove oil can be harmful if swallowed or applied undiluted."},
+{name:"Henna",hi:"मेहंदी",latin:"Lawsonia inermis",part:"Leaves",cat:"Leaves",uses:"Leaves traditionally used as a natural dye.",benefit:"Contains lawsone, the plant's colouring compound.",safety:"Avoid black henna products that may contain harmful added chemicals."},
+{name:"Hibiscus",hi:"गुड़हल",latin:"Hibiscus rosa-sinensis",part:"Flowers and leaves",cat:"Leaves",uses:"Traditionally used in hair and skin preparations.",benefit:"Flowers contain colourful plant pigments.",safety:"Evidence for many cosmetic claims is limited; patch-test topical products."},
+{name:"Bhumyamalaki",hi:"भूम्यामलकी",latin:"Phyllanthus amarus",part:"Whole plant",cat:"Other",uses:"Traditionally used in Ayurvedic preparations.",benefit:"Contains lignans and other plant compounds under study.",safety:"May interact with medicines. Do not use for liver conditions without a doctor."},
+{name:"Vasaka",hi:"वासा",latin:"Justicia adhatoda",part:"Leaves",cat:"Leaves",uses:"Traditionally used in respiratory herbal preparations.",benefit:"Contains vasicine and related alkaloids.",safety:"Not suitable for self-treatment, especially during pregnancy."},
+{name:"Patha",hi:"पाठा",latin:"Cissampelos pareira",part:"Root",cat:"Roots",uses:"Mentioned in traditional Ayurvedic formulations.",benefit:"Contains alkaloids studied in early research.",safety:"Reliable human safety information is limited."},
+{name:"Aparajita",hi:"अपराजिता",latin:"Clitoria ternatea",part:"Flowers and roots",cat:"Other",uses:"Flowers used in traditional drinks and preparations.",benefit:"Blue flowers contain anthocyanin pigments.",safety:"Safety of concentrated extracts is not well established."},
+{name:"Lemongrass",hi:"नींबू घास",latin:"Cymbopogon citratus",part:"Leaves",cat:"Leaves",uses:"Used in teas, cooking and aromatic preparations.",benefit:"Contains fragrant essential oils.",safety:"Essential oil can irritate skin; do not swallow concentrated oil."},
+{name:"Vetiver",hi:"खस",latin:"Chrysopogon zizanioides",part:"Roots",cat:"Roots",uses:"Roots used traditionally for fragrance and cooling mats.",benefit:"Valued for its distinctive aromatic oil.",safety:"Avoid ingesting essential oil; evidence for medical uses is limited."},
+{name:"Indian sandalwood",hi:"चंदन",latin:"Santalum album",part:"Heartwood",cat:"Other",uses:"Traditionally used in fragrance and topical preparations.",benefit:"Aromatic heartwood produces sandalwood oil.",safety:"Use only properly sourced products; topical products may irritate skin."},
+{name:"Nagarmotha",hi:"नागरमोथा",latin:"Cyperus rotundus",part:"Tuber",cat:"Roots",uses:"Traditionally used in Ayurvedic preparations.",benefit:"Contains aromatic plant compounds.",safety:"Human safety evidence for concentrated products is limited."},
+{name:"Chitrak",hi:"चित्रक",latin:"Plumbago zeylanica",part:"Root",cat:"Roots",uses:"Described in traditional Ayurvedic texts.",benefit:"Historically used in carefully prepared formulations.",safety:"Can be irritating and toxic. Not for home preparation or self-use."},
+{name:"Bala",hi:"बला",latin:"Sida cordifolia",part:"Root and whole plant",cat:"Roots",uses:"Traditionally used in Ayurvedic formulations.",benefit:"Contains several alkaloids and plant compounds.",safety:"May contain stimulant alkaloids and affect the heart. Avoid self-medication."},
+{name:"Atibala",hi:"अतिबला",latin:"Abutilon indicum",part:"Root and leaves",cat:"Leaves",uses:"Traditionally used in Ayurvedic preparations.",benefit:"Studied for its naturally occurring plant compounds.",safety:"Human safety evidence is limited."},
+{name:"Shalparni",hi:"शालपर्णी",latin:"Desmodium gangeticum",part:"Root",cat:"Roots",uses:"Traditionally included in Dashamoola formulations.",benefit:"Known in classical Ayurvedic herbal practice.",safety:"Reliable clinical evidence and safety data are limited."},
+{name:"Prishniparni",hi:"पृष्णिपर्णी",latin:"Uraria picta",part:"Root",cat:"Roots",uses:"Traditionally included in Dashamoola formulations.",benefit:"A plant recognised in classical Ayurveda.",safety:"Use only with qualified professional guidance."},
+{name:"Kantakari",hi:"कंटकारी",latin:"Solanum virginianum",part:"Whole plant",cat:"Other",uses:"Traditionally used in Ayurvedic respiratory formulations.",benefit:"Contains naturally occurring steroidal compounds.",safety:"Some Solanum species can be toxic; correct identification is important."},
+{name:"Brihati",hi:"बृहती",latin:"Solanum indicum",part:"Root and fruit",cat:"Fruits",uses:"Traditionally included in Dashamoola preparations.",benefit:"Known in classical Ayurvedic practice.",safety:"Correct plant identification and professional advice are important."},
+{name:"Gokshura",hi:"गोक्षुर",latin:"Tribulus terrestris",part:"Fruit",cat:"Fruits",uses:"Traditionally used in urinary and wellness formulations.",benefit:"Contains steroidal saponins studied in research.",safety:"May interact with medicines; supplement claims are not well proven."},
+{name:"Amalaki",hi:"आमलकी",latin:"Phyllanthus emblica",part:"Fruit",cat:"Fruits",uses:"Another traditional name for amla in Ayurveda.",benefit:"Amla is already listed above; this entry is a synonym, not a separate species.",safety:"This is a duplicate of Amla and should not be counted as a separate herb."},
+{name:"Kachur",hi:"कचूर",latin:"Curcuma zedoaria",part:"Rhizome",cat:"Roots",uses:"Traditionally used as an aromatic ingredient.",benefit:"Contains aromatic oils and plant compounds.",safety:"Avoid medicinal use without professional guidance."},
+{name:"Black turmeric",hi:"काली हल्दी",latin:"Curcuma caesia",part:"Rhizome",cat:"Roots",uses:"Used in some regional traditional practices.",benefit:"Contains distinctive aromatic compounds.",safety:"Safety and effectiveness are not well established."},
+{name:"Mango ginger",hi:"आम हल्दी",latin:"Curcuma amada",part:"Rhizome",cat:"Roots",uses:"Used as a food ingredient and in regional traditions.",benefit:"Has a mango-like aroma and contains plant compounds.",safety:"Food use is different from concentrated medicinal preparations."},
+{name:"Galangal",hi:"कुलंजन",latin:"Alpinia galanga",part:"Rhizome",cat:"Roots",uses:"Used as a spice and in traditional preparations.",benefit:"Contains aromatic oils.",safety:"May cause sensitivity or digestive discomfort."},
+{name:"Indian bay leaf",hi:"तेजपत्ता",latin:"Cinnamomum tamala",part:"Leaves",cat:"Leaves",uses:"Common culinary spice also used traditionally.",benefit:"Leaves contain aromatic oils.",safety:"Use as food; medicinal extracts need further safety study."},
+{name:"Curry leaf",hi:"करी पत्ता",latin:"Murraya koenigii",part:"Leaves",cat:"Leaves",uses:"Used in cooking and traditional food preparations.",benefit:"Leaves contain plant antioxidants.",safety:"Food use is different from concentrated extracts."},
+{name:"Drumstick tree",hi:"सहजन",latin:"Moringa oleifera",part:"Leaves and pods",cat:"Leaves",uses:"Leaves and pods are eaten as vegetables.",benefit:"A nutrient-containing food plant.",safety:"This is the same species as Moringa; do not count it twice."},
+{name:"Indian pennywort",hi:"मंडूकपर्णी",latin:"Centella asiatica",part:"Leaves",cat:"Leaves",uses:"Traditionally used in herbal preparations.",benefit:"Contains triterpenoids.",safety:"This is the same species as Mandukaparni; do not count it twice."},
+{name:"Lemon",hi:"नींबू",latin:"Citrus limon",part:"Fruit peel and juice",cat:"Fruits",uses:"Used as food and in traditional home preparations.",benefit:"Juice contains vitamin C.",safety:"Citrus juice can irritate skin in sunlight; avoid applying before sun exposure."},
+{name:"Pomegranate",hi:"अनार",latin:"Punica granatum",part:"Fruit and peel",cat:"Fruits",uses:"Fruit used as food; peel appears in some traditional preparations.",benefit:"Contains polyphenols and dietary nutrients.",safety:"Peel extracts are not the same as eating the fruit; avoid self-medication."},
+{name:"Jamun",hi:"जामुन",latin:"Syzygium cumini",part:"Fruit and seed",cat:"Fruits",uses:"Fruit eaten fresh and seeds used in some traditional preparations.",benefit:"Fruit contains pigments and plant compounds.",safety:"Seed products may affect blood sugar and interact with medicines."},
+{name:"Papaya",hi:"पपीता",latin:"Carica papaya",part:"Fruit and leaves",cat:"Fruits",uses:"Fruit eaten as food; other parts used in some traditions.",benefit:"Fruit provides vitamin C and other nutrients.",safety:"Avoid unverified leaf extracts; papaya latex may cause allergy."},
+{name:"Guava",hi:"अमरूद",latin:"Psidium guajava",part:"Fruit and leaves",cat:"Fruits",uses:"Fruit is eaten; leaves appear in traditional preparations.",benefit:"Fruit is a source of vitamin C and fibre.",safety:"Leaf extracts may interact with medicines; evidence is limited."},
+{name:"Curry tree",hi:"मीठा नीम",latin:"Bergera koenigii",part:"Leaves",cat:"Leaves",uses:"Leaves are used as a culinary herb.",benefit:"Leaves contain aromatic and antioxidant compounds.",safety:"Use as food; concentrated extracts need more study."},
+{name:"Indian goosegrass",hi:"गुड़दरी",latin:"Eleusine indica",part:"Whole plant",cat:"Other",uses:"Used in some regional traditional practices.",benefit:"A plant studied for its natural compounds.",safety:"Reliable human safety information is limited."},
+{name:"Dandelion",hi:"सिंहपर्णी",latin:"Taraxacum officinale",part:"Leaves and root",cat:"Roots",uses:"Used as a food plant and in traditional herbal practices.",benefit:"Leaves contain nutrients and plant compounds.",safety:"May cause allergy, especially in people sensitive to related plants."},
+{name:"Chamomile",hi:"बबूने का फूल",latin:"Matricaria chamomilla",part:"Flowers",cat:"Other",uses:"Flowers traditionally used in herbal infusions.",benefit:"Contains aromatic compounds such as apigenin.",safety:"May cause allergic reactions, especially in people sensitive to daisies."},
+{name:"Rose",hi:"गुलाब",latin:"Rosa damascena",part:"Petals",cat:"Other",uses:"Petals used in fragrance, food and traditional preparations.",benefit:"Petals contain aromatic compounds.",safety:"Use clean, food-grade products; fragrances may irritate sensitive skin."},
+{name:"Marigold",hi:"गेंदा",latin:"Tagetes erecta",part:"Flowers",cat:"Other",uses:"Used in traditional practices and as an ornamental flower.",benefit:"Flowers contain carotenoid pigments.",safety:"May cause skin irritation or allergy."},
+{name:"Calendula",hi:"कैलेंडुला",latin:"Calendula officinalis",part:"Flowers",cat:"Other",uses:"Traditionally used in topical preparations.",benefit:"Contains flavonoids and carotenoids.",safety:"May cause allergy, especially in people sensitive to the daisy family."},
+{name:"Basil",hi:"सब्जा",latin:"Ocimum basilicum",part:"Leaves and seeds",cat:"Leaves",uses:"Used in food and traditional preparations.",benefit:"Aromatic leaves contain essential oils.",safety:"Do not confuse with Tulsi; concentrated oils need care."},
+{name:"Indian borage",hi:"अजवाइन पत्ता",latin:"Coleus amboinicus",part:"Leaves",cat:"Leaves",uses:"Leaves used in regional cooking and traditional preparations.",benefit:"Aromatic leaves contain essential oils.",safety:"May cause irritation or allergy; medicinal evidence is limited."},
+{name:"Ajwain",hi:"अजवाइन",latin:"Trachyspermum ammi",part:"Seeds",cat:"Other",uses:"Used as a spice and traditionally after meals.",benefit:"Seeds contain thymol and other aromatic compounds.",safety:"Concentrated oils can irritate; avoid medicinal doses without advice."},
+{name:"Carom leaf",hi:"पत्थरचूर",latin:"Plectranthus barbatus",part:"Leaves and root",cat:"Leaves",uses:"Used in some traditional herbal practices.",benefit:"Contains forskolin, a compound studied in research.",safety:"Forskolin may interact with medicines and affect blood pressure."},
+{name:"Rauvolfia",hi:"सर्पगंधा",latin:"Rauvolfia serpentina",part:"Root",cat:"Roots",uses:"Historically used in traditional medicine.",benefit:"Contains reserpine, a pharmacologically active compound.",safety:"Can cause serious effects and interact with medicines. Never self-use."},
+{name:"Indian madder",hi:"मंजिष्ठा",latin:"Rubia cordifolia",part:"Root",cat:"Roots",uses:"Traditionally used in skin-related Ayurvedic preparations.",benefit:"Contains anthraquinone pigments and other compounds.",safety:"Safety of long-term or concentrated use is uncertain."},
+{name:"Sariva",hi:"सारिवा",latin:"Hemidesmus indicus",part:"Root",cat:"Roots",uses:"Traditionally used in cooling herbal preparations.",benefit:"Root contains aromatic compounds.",safety:"Evidence for medicinal effects is limited."},
+{name:"Anantamul",hi:"अनंतमूल",latin:"Decalepis hamiltonii",part:"Root",cat:"Roots",uses:"Root traditionally used as an aromatic ingredient.",benefit:"Known for its distinctive fragrant root.",safety:"Use only correctly identified, properly sourced plant material."},
+{name:"Kusha grass",hi:"कुश",latin:"Desmostachya bipinnata",part:"Whole plant",cat:"Other",uses:"Known in traditional Indian practices.",benefit:"A grass with cultural and traditional significance.",safety:"Medicinal effectiveness and safety are not established."},
+{name:"Darbha",hi:"दर्भ",latin:"Imperata cylindrica",part:"Root",cat:"Roots",uses:"Used in some traditional practices.",benefit:"A grass studied for its plant constituents.",safety:"Do not use as a treatment; evidence is limited."},
+{name:"Bamboo",hi:"बांस",latin:"Bambusa bambos",part:"Young shoots and leaves",cat:"Leaves",uses:"Shoots used as food in some regions; other parts used traditionally.",benefit:"Bamboo shoots provide fibre when properly prepared.",safety:"Some bamboo shoots require proper processing before eating."},
+{name:"Lotus",hi:"कमल",latin:"Nelumbo nucifera",part:"Flowers, seeds and rhizome",cat:"Other",uses:"Parts used as food and in traditional practices.",benefit:"Seeds and rhizomes provide food nutrients.",safety:"Use clean, correctly identified food-grade parts."},
+{name:"Water lily",hi:"कुमुदिनी",latin:"Nymphaea nouchali",part:"Flowers and rhizome",cat:"Other",uses:"Known in traditional and cultural practices.",benefit:"An aquatic plant with ornamental and cultural value.",safety:"Medicinal effects and safety are not well established."},
+{name:"Indian costus",hi:"कुठ",latin:"Saussurea costus",part:"Root",cat:"Roots",uses:"Traditionally used as an aromatic ingredient.",benefit:"Root contains fragrant compounds.",safety:"Plant is threatened in the wild; use cultivated, legal sources only."},
+{name:"Sweet flag",hi:"बच",latin:"Acorus calamus",part:"Rhizome",cat:"Roots",uses:"Historically used in traditional preparations.",benefit:"Aromatic plant with a long history of traditional use.",safety:"Contains compounds of safety concern. Do not consume."},
+{name:"Indian valerian",hi:"तगर",latin:"Valeriana jatamansi",part:"Root",cat:"Roots",uses:"Traditionally used in aromatic and calming preparations.",benefit:"Contains volatile compounds studied in research.",safety:"May cause drowsiness and interact with medicines."},
+{name:"Spikenard",hi:"जटामांसी",latin:"Nardostachys jatamansi",part:"Root and rhizome",cat:"Roots",uses:"Traditionally used in Ayurvedic preparations.",benefit:"Aromatic plant compounds are studied in early research.",safety:"This is the same species as Jatamansi above; do not count it twice."},
+{name:"White turmeric",hi:"श्वेत हल्दी",latin:"Curcuma angustifolia",part:"Rhizome",cat:"Roots",uses:"Rhizome traditionally used as a food starch in some regions.",benefit:"Provides starch and plant compounds.",safety:"Use properly identified, food-grade material."},
+{name:"Greater galangal",hi:"बड़ी कुलंजन",latin:"Alpinia galanga",part:"Rhizome",cat:"Roots",uses:"Used as a spice in regional cuisines.",benefit:"Contains aromatic oils.",safety:"This is the same species as Galangal above; do not count it twice."},
+{name:"Indian beech",hi:"करंज",latin:"Millettia pinnata",part:"Seeds and leaves",cat:"Other",uses:"Traditionally used in topical preparations.",benefit:"Seeds contain oil with industrial and traditional uses.",safety:"Seed oil is not for ingestion and may irritate skin."},
+{name:"Flame of the forest",hi:"पलाश",latin:"Butea monosperma",part:"Flowers, seeds and bark",cat:"Other",uses:"Used in traditional practices and natural dyes.",benefit:"Flowers contain natural pigments.",safety:"Medicinal safety is not well established."},
+{name:"Indian kino",hi:"बीजासार",latin:"Pterocarpus marsupium",part:"Heartwood",cat:"Other",uses:"Traditionally used in Ayurvedic preparations.",benefit:"Heartwood contains polyphenolic compounds.",safety:"May affect blood sugar; avoid unsupervised use."},
+{name:"Bael leaf",hi:"बेलपत्र",latin:"Aegle marmelos",part:"Leaves",cat:"Leaves",uses:"Leaves used in cultural and traditional practices.",benefit:"Contains naturally occurring plant compounds.",safety:"This is the same species as Bael above; do not count it twice."},
+{name:"Indian fig",hi:"गूलर",latin:"Ficus racemosa",part:"Bark and fruit",cat:"Fruits",uses:"Traditionally used in Ayurvedic preparations.",benefit:"Fruit and bark contain plant polyphenols.",safety:"Evidence and safety of concentrated extracts are limited."},
+{name:"Peepal",hi:"पीपल",latin:"Ficus religiosa",part:"Leaves and bark",cat:"Leaves",uses:"Known in traditional and cultural practices.",benefit:"Contains naturally occurring plant compounds.",safety:"Medicinal effectiveness is not established; avoid self-treatment."},
+{name:"Banyan",hi:"बरगद",latin:"Ficus benghalensis",part:"Bark and aerial roots",cat:"Roots",uses:"Traditionally mentioned in Ayurvedic texts.",benefit:"A culturally significant tree with studied plant compounds.",safety:"Reliable human safety evidence is limited."},
+{name:"Indian bael grass",hi:"दूर्वा",latin:"Cynodon dactylon",part:"Whole plant",cat:"Other",uses:"Used in traditional and cultural practices.",benefit:"A common grass containing plant compounds.",safety:"Medicinal claims need better research; avoid unverified preparations."},
+{name:"Bermuda grass",hi:"दूब घास",latin:"Cynodon dactylon",part:"Whole plant",cat:"Other",uses:"Known in traditional practices.",benefit:"A hardy grass with traditional significance.",safety:"This is the same species as Indian bael grass above; do not count twice."},
+{name:"White sandalwood",hi:"श्वेत चंदन",latin:"Santalum album",part:"Heartwood",cat:"Other",uses:"Used in fragrance and traditional topical preparations.",benefit:"Produces fragrant sandalwood oil.",safety:"This is the same species as Indian sandalwood above; do not count twice."},
+{name:"Black cumin",hi:"कलौंजी",latin:"Nigella sativa",part:"Seeds",cat:"Other",uses:"Used as a spice and in traditional food preparations.",benefit:"Contains thymoquinone and other studied compounds.",safety:"May interact with medicines, including those affecting blood sugar or clotting."},
+{name:"White mustard",hi:"सफेद सरसों",latin:"Sinapis alba",part:"Seeds",cat:"Other",uses:"Used as a culinary spice.",benefit:"Seeds contain oils and pungent compounds.",safety:"May cause allergy or skin irritation."},
+{name:"Sesame",hi:"तिल",latin:"Sesamum indicum",part:"Seeds and oil",cat:"Other",uses:"Used as food and in traditional massage preparations.",benefit:"Seeds provide healthy fats and minerals.",safety:"Sesame is a common food allergen."},
+{name:"Flax",hi:"अलसी",latin:"Linum usitatissimum",part:"Seeds",cat:"Other",uses:"Seeds used as food and in traditional diets.",benefit:"Provides fibre and alpha-linolenic acid.",safety:"Eat only food-grade seeds; fibre can affect medicine absorption."},
+{name:"Psyllium",hi:"इसबगोल",latin:"Plantago ovata",part:"Seed husk",cat:"Other",uses:"Husk used as a source of dietary fibre.",benefit:"Absorbs water and adds bulk to stool.",safety:"Must be taken with adequate fluid; may affect medicine absorption."},
+{name:"Indian senna",hi:"सनाय",latin:"Senna alexandrina",part:"Leaves and pods",cat:"Leaves",uses:"Traditionally used as a laxative plant.",benefit:"Contains sennosides with laxative activity.",safety:"Can cause cramps and electrolyte problems. Not for unsupervised use."},
+{name:"Brahmi grass",hi:"नीर ब्राह्मी",latin:"Bacopa monnieri",part:"Whole plant",cat:"Other",uses:"Traditionally used in memory-related preparations.",benefit:"Contains bacosides studied in research.",safety:"This is the same species as Brahmi above; do not count it twice."},
+{name:"Indian snakeroot",hi:"सर्पगंधा",latin:"Rauvolfia serpentina",part:"Root",cat:"Roots",uses:"Historically used in traditional medicine.",benefit:"Contains reserpine, a potent active compound.",safety:"This is the same species as Rauvolfia above; do not count it twice."},
+{name:"Indian trumpet flower",hi:"सप्तपर्णी",latin:"Alstonia scholaris",part:"Bark and leaves",cat:"Leaves",uses:"Traditionally mentioned in regional herbal practices.",benefit:"Contains alkaloids studied in laboratory research.",safety:"Some compounds are pharmacologically active; avoid self-medication."},
+{name:"Wild turmeric",hi:"वन हल्दी",latin:"Curcuma aromatica",part:"Rhizome",cat:"Roots",uses:"Traditionally used in cosmetic and aromatic preparations.",benefit:"Contains fragrant essential oils.",safety:"Topical use may irritate sensitive skin; evidence is limited."},
+{name:"Indian snakeroot tree",hi:"कुटज",latin:"Holarrhena pubescens",part:"Bark and seeds",cat:"Other",uses:"Traditionally used in Ayurvedic digestive formulations.",benefit:"Contains alkaloids studied in research.",safety:"May interact with medicines; do not self-treat digestive illness."},
+{name:"Kutki",hi:"कुटकी",latin:"Picrorhiza kurroa",part:"Rhizome",cat:"Roots",uses:"Traditionally used in Ayurvedic formulations.",benefit:"Contains picrosides studied in early research.",safety:"May cause digestive effects and interact with medicines."},
+{name:"Indian barberry",hi:"दारुहल्दी",latin:"Berberis aristata",part:"Root and stem",cat:"Roots",uses:"Traditionally used in topical and Ayurvedic preparations.",benefit:"Contains berberine, a biologically active compound.",safety:"Berberine can interact with many medicines and is not suitable for self-use."},
+{name:"Indian frankincense",hi:"सलई",latin:"Boswellia serrata",part:"Resin",cat:"Other",uses:"Resin traditionally used in Ayurvedic formulations.",benefit:"Contains boswellic acids studied in research.",safety:"May interact with medicines and cause digestive effects."},
+{name:"Bakul",hi:"बकुल",latin:"Mimusops elengi",part:"Bark and flowers",cat:"Other",uses:"Traditionally used in oral-care and aromatic preparations.",benefit:"Flowers are fragrant; bark contains tannins.",safety:"Clinical evidence is limited; do not replace dental care."},
+{name:"Night jasmine",hi:"हरसिंगार",latin:"Nyctanthes arbor-tristis",part:"Leaves and flowers",cat:"Leaves",uses:"Traditionally used in regional herbal preparations.",benefit:"Contains plant pigments and other compounds under study.",safety:"Safety of extracts is uncertain; avoid self-medication."},
+{name:"Indian mulberry",hi:"आल",latin:"Morinda tinctoria",part:"Root and fruit",cat:"Fruits",uses:"Used in regional traditional practices and natural dyes.",benefit:"Contains natural pigments and plant compounds.",safety:"Medicinal effectiveness and safety are not well established."},
+{name:"Malabar nut",hi:"अडूसा",latin:"Justicia adhatoda",part:"Leaves",cat:"Leaves",uses:"Traditionally used in respiratory herbal preparations.",benefit:"Contains vasicine and related alkaloids.",safety:"This is the same species as Vasaka above; do not count it twice."},
+{name:"Indian senna tree",hi:"अमलतास",latin:"Cassia fistula",part:"Fruit pulp",cat:"Fruits",uses:"Traditionally used in some digestive preparations.",benefit:"Fruit pulp contains sugars and plant compounds.",safety:"May cause laxative effects; avoid unsupervised use."},
+{name:"Butterfly pea",hi:"अपराजिता",latin:"Clitoria ternatea",part:"Flowers",cat:"Other",uses:"Flowers used in traditional drinks and food colouring.",benefit:"Blue colour comes from anthocyanin pigments.",safety:"This is the same species as Aparajita above; do not count twice."},
+{name:"Indian rosewood",hi:"शीशम",latin:"Dalbergia sissoo",part:"Leaves and bark",cat:"Leaves",uses:"Mentioned in some regional traditional practices.",benefit:"A tree with naturally occurring plant compounds.",safety:"Medicinal uses are not well established."},
+{name:"Indian beech tree",hi:"करंज",latin:"Millettia pinnata",part:"Seeds and leaves",cat:"Other",uses:"Traditionally used in topical preparations.",benefit:"Seed oil has traditional and industrial uses.",safety:"This is the same species as Indian beech above; do not count twice."}
 ];
 
 let hindi = false;
