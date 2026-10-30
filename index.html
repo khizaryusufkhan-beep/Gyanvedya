@@ -270,23 +270,46 @@ async function loadPhoto(herb,index){
  }
 }
 
+
 function showDetails(index){
- const h=herbs[index];
- document.getElementById("modalContent").innerHTML=`
- <h2>${h.name} (${h.hi})</h2>
- <p><i>${h.latin}</i></p>
- <h3>${hindi?"पौधे का उपयोगी भाग":"Parts traditionally used"}</h3>
- <p>${h.part}</p>
- <h3>${hindi?"पारंपरिक आयुर्वेदिक उपयोग":"Traditional Ayurvedic uses"}</h3>
+ const h = herbs[index];
+
+ document.getElementById("modalContent").innerHTML = `
+ <div style="text-align:center;margin-bottom:20px">
+   <div style="font-size:55px">🌿</div>
+   <h2>${h.name}</h2>
+   <p style="color:#71806e">${h.hi}</p>
+   <p><i>${h.latin}</i></p>
+ </div>
+
+ <div style="background:#eaf0e4;padding:18px;border-radius:10px">
+   <h3>🌱 Botanical Information</h3>
+   <p><b>Scientific name:</b> ${h.latin}</p>
+   <p><b>Plant part used:</b> ${h.part}</p>
+   <p><b>Category:</b> ${h.cat}</p>
+ </div>
+
+ <h3>📖 Traditional Ayurvedic Uses</h3>
  <p>${h.uses}</p>
- <h3>${hindi?"पारंपरिक लाभ और शोध":"Traditional benefits and research"}</h3>
+
+ <h3>🌿 Traditional Benefits</h3>
  <p>${h.benefit}</p>
- <h3>${hindi?"सावधानियाँ":"Safety and precautions"}</h3>
+
+ <h3>⚠️ Safety and Precautions</h3>
  <p>${h.safety}</p>
- <span class="source">Botanical identity and traditional-use descriptions are educational starting points. Further references and image credits will be added as the catalogue is reviewed.</span>
+
+ <div style="background:#f4f2e8;padding:15px;border-radius:9px;margin-top:18px">
+   <h3>Important Information</h3>
+   <p>Traditional uses do not necessarily establish medical effectiveness. This information is educational and is not a substitute for professional medical advice.</p>
+ </div>
+
+ <p style="font-size:12px;color:#71806e;margin-top:18px">
+ References and verified botanical image credits will be added as each herb profile is reviewed.
+ </p>
  `;
  document.getElementById("modal").style.display="block";
 }
+
 
 function closeModal(){
  document.getElementById("modal").style.display="none";
