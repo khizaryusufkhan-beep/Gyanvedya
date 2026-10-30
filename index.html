@@ -4,149 +4,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GYANVEDYA | Knowledge for Everyone</title>
+<title>GYANVEDYA | Ayurvedic Knowledge</title>
+<meta name="description" content="Explore 200 Ayurvedic herbs, their traditional uses, botanical information and research.">
 
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #f7f9fc;
-  color: #17243a;
+  background: #f8f8f0;
+  color: #263b2d;
   line-height: 1.6;
 }
 
 header {
-  background: #102b46;
+  background: #183d2b;
   color: white;
-  padding: 20px 7%;
+  padding: 18px 6%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
 }
 
 .logo {
+  color: #d8c58c;
   font-size: 25px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #e7bd70;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 12px;
   font-size: 14px;
 }
 
+.lang-btn {
+  background: #d8c58c;
+  color: #183d2b;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 .hero {
-  background: linear-gradient(135deg, #102b46, #245778);
+  background: linear-gradient(120deg, #244c34, #547b50);
   color: white;
   text-align: center;
-  padding: 90px 20px;
+  padding: 85px 20px;
 }
 
 .hero h1 {
-  font-size: clamp(34px, 7vw, 52px);
+  font-size: clamp(32px, 7vw, 48px);
   margin-bottom: 15px;
 }
 
-.hero span {
-  color: #e7bd70;
-}
-
 .hero p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto 25px;
-  color: #e0e8ef;
+  color: #edf3e7;
 }
 
-.btn {
+.hero-btn {
   display: inline-block;
-  background: #e7bd70;
-  color: #102b46;
+  background: #e0ce96;
+  color: #183d2b;
+  text-decoration: none;
   padding: 12px 25px;
   border-radius: 6px;
-  text-decoration: none;
   font-weight: bold;
 }
 
 section {
-  padding: 65px 7%;
+  padding: 55px 7%;
+}
+
+.heading {
   text-align: center;
-}
-
-.section-title {
-  font-size: 30px;
-  margin-bottom: 12px;
-  color: #102b46;
-}
-
-.intro {
-  max-width: 650px;
-  margin: 0 auto 25px;
-  color: #64748b;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.card {
-  background: white;
-  padding: 28px 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  text-align: left;
-}
-
-.card h3 {
-  color: #245778;
+  font-size: 29px;
+  color: #285337;
   margin-bottom: 10px;
 }
 
-.card p {
-  color: #64748b;
+.subheading {
+  text-align: center;
+  color: #71806e;
+  margin-bottom: 28px;
+}
+
+.search-box {
+  max-width: 550px;
+  margin: 25px auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #cbd7c4;
+  border-radius: 8px;
+  font-size: 16px;
+  outline-color: #547b50;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.category {
+  background: white;
+  padding: 18px 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #e1e8dc;
+}
+
+.category span {
+  font-size: 27px;
+}
+
+.category h3 {
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.herb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.herb-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.herb-picture {
+  height: 145px;
+  background: #e6eddf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+}
+
+.herb-info {
+  padding: 18px;
+}
+
+.herb-info h3 {
+  color: #285337;
+  margin-bottom: 3px;
+}
+
+.herb-info p {
+  color: #71806e;
   font-size: 14px;
 }
 
 #about {
-  background: #edf2f7;
+  background: #eaf0e4;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 700px;
+  margin: auto;
+  color: #52634f;
 }
 
 #contact {
-  background: white;
+  text-align: center;
 }
 
 footer {
-  background: #102b46;
+  background: #183d2b;
   color: white;
   text-align: center;
-  padding: 25px 15px;
-  font-size: 14px;
+  padding: 25px;
 }
 
-@media (max-width: 600px) {
+footer p {
+  font-size: 13px;
+  margin: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media(max-width: 600px) {
   header {
     justify-content: center;
   }
 
-  nav a {
-    margin: 0 7px;
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero {
-    padding: 70px 20px;
+    padding: 65px 18px;
   }
 }
 </style>
@@ -155,81 +231,221 @@ footer {
 <body>
 
 <header>
-  <div class="logo">GYANVEDYA</div>
+  <div class="logo">GYANVEDYA 🌿</div>
+
   <nav>
-    <a href="#home">Home</a>
-    <a href="#knowledge">Knowledge</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#home" data-en="Home" data-hi="होम">Home</a>
+    <a href="#herbs" data-en="Herbs" data-hi="जड़ी-बूटियाँ">Herbs</a>
+    <a href="#about" data-en="About" data-hi="हमारे बारे में">About</a>
+    <a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
+
+    <button class="lang-btn" onclick="changeLanguage()">
+      हिन्दी
+    </button>
   </nav>
 </header>
 
 <main>
 
 <section class="hero" id="home">
-  <h1>Welcome to <span>GYANVEDYA</span></h1>
-  <p>
-    Discover knowledge, explore new ideas
-    and stay informed. A world of information
-    begins with curiosity.
+  <h1 data-en="Discover the Wisdom of Ayurveda"
+      data-hi="आयुर्वेद के ज्ञान को जानें">
+    Discover the Wisdom of Ayurveda
+  </h1>
+
+  <p data-en="Explore 200 Ayurvedic herbs, their botanical identity, traditional uses and valuable knowledge."
+     data-hi="200 आयुर्वेदिक जड़ी-बूटियों, उनकी पहचान और पारंपरिक उपयोगों के बारे में जानें।">
+    Explore 200 Ayurvedic herbs, their botanical identity,
+    traditional uses and valuable knowledge.
   </p>
-  <a href="#knowledge" class="btn">Explore Now</a>
+
+  <a href="#herbs" class="hero-btn"
+     data-en="Explore Herbs"
+     data-hi="जड़ी-बूटियाँ देखें">
+    Explore Herbs
+  </a>
 </section>
 
-<section id="knowledge">
-  <h2 class="section-title">Explore Knowledge</h2>
-  <p class="intro">
-    Learn something new, discover useful information
-    and expand your understanding of the world.
+<section id="herbs">
+
+  <h2 class="heading"
+      data-en="Explore Ayurvedic Herbs"
+      data-hi="आयुर्वेदिक जड़ी-बूटियाँ">
+    Explore Ayurvedic Herbs
+  </h2>
+
+  <p class="subheading"
+     data-en="Discover the traditional world of medicinal plants"
+     data-hi="औषधीय पौधों की पारंपरिक दुनिया को जानें">
+    Discover the traditional world of medicinal plants
   </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Education</h3>
-      <p>Explore educational topics and useful learning resources.</p>
+  <div class="search-box">
+    <input type="search" id="herbSearch"
+      placeholder="Search herbs... / जड़ी-बूटी खोजें..."
+      oninput="searchHerbs()">
+  </div>
+
+  <div class="categories">
+    <div class="category">
+      <span>🌱</span>
+      <h3>Medicinal Plants</h3>
     </div>
 
-    <div class="card">
-      <h3>Technology</h3>
-      <p>Discover digital trends and new innovations.</p>
+    <div class="category">
+      <span>🌿</span>
+      <h3>Herbal Leaves</h3>
     </div>
 
-    <div class="card">
-      <h3>General Knowledge</h3>
-      <p>Expand your awareness with interesting facts and information.</p>
+    <div class="category">
+      <span>🌳</span>
+      <h3>Medicinal Trees</h3>
+    </div>
+
+    <div class="category">
+      <span>🍃</span>
+      <h3>Roots & Seeds</h3>
     </div>
   </div>
+
+  <h2 class="heading" style="margin-top:45px;"
+      data-en="Featured Herbs"
+      data-hi="प्रमुख जड़ी-बूटियाँ">
+    Featured Herbs
+  </h2>
+
+  <div class="herb-grid" id="herbGrid">
+
+    <div class="herb-card" data-name="ashwagandha अश्वगंधा">
+      <div class="herb-picture">🌿</div>
+      <div class="herb-info">
+        <h3>Ashwagandha</h3>
+        <p>अश्वगंधा</p>
+        <p><i>Withania somnifera</i></p>
+        <p>Traditionally used in Ayurveda as a rejuvenating herb.</p>
+      </div>
+    </div>
+
+    <div class="herb-card" data-name="tulsi तुलसी">
+      <div class="herb-picture">🍃</div>
+      <div class="herb-info">
+        <h3>Tulsi</h3>
+        <p>तुलसी</p>
+        <p><i>Ocimum tenuiflorum</i></p>
+        <p>A well-known plant in traditional Ayurvedic practices.</p>
+      </div>
+    </div>
+
+    <div class="herb-card" data-name="brahmi ब्राह्मी">
+      <div class="herb-picture">🌱</div>
+      <div class="herb-info">
+        <h3>Brahmi</h3>
+        <p>ब्राह्मी</p>
+        <p><i>Bacopa monnieri</i></p>
+        <p>Traditionally associated with memory and learning.</p>
+      </div>
+    </div>
+
+    <div class="herb-card" data-name="amla आंवला">
+      <div class="herb-picture">🍈</div>
+      <div class="herb-info">
+        <h3>Amla</h3>
+        <p>आंवला</p>
+        <p><i>Phyllanthus emblica</i></p>
+        <p>A traditional fruit valued in Ayurvedic knowledge.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p id="noResults" class="subheading hidden">
+    No matching herbs found.
+  </p>
+
+  <p style="text-align:center; margin-top:25px; color:#71806e;">
+    4 featured herbs — our goal is to build a collection of 200.
+  </p>
+
 </section>
 
 <section id="about">
-  <h2 class="section-title">About GYANVEDYA</h2>
-  <p class="intro">
-    GYANVEDYA is a knowledge and information portal
-    created to make learning and discovering information
-    simple and accessible.
-    Our vision is to encourage curiosity,
-    awareness and continuous learning.
+
+  <h2 class="heading"
+      data-en="About GYANVEDYA"
+      data-hi="GYANVEDYA के बारे में">
+    About GYANVEDYA
+  </h2>
+
+  <p class="about-text"
+     data-en="GYANVEDYA is an educational knowledge portal dedicated to exploring Ayurveda, medicinal plants and traditional herbal knowledge. Our aim is to make information accessible to everyone."
+     data-hi="GYANVEDYA एक शैक्षिक ज्ञान पोर्टल है जो आयुर्वेद, औषधीय पौधों और पारंपरिक जड़ी-बूटी ज्ञान को सभी तक पहुँचाने के लिए समर्पित है।">
+    GYANVEDYA is an educational knowledge portal dedicated
+    to exploring Ayurveda, medicinal plants and traditional
+    herbal knowledge. Our aim is to make information
+    accessible to everyone.
   </p>
+
 </section>
 
 <section id="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <p class="intro">
-    Have a question, suggestion or feedback?
-    We would love to hear from you.
+
+  <h2 class="heading"
+      data-en="Contact Us"
+      data-hi="हमसे संपर्क करें">
+    Contact Us
+  </h2>
+
+  <p class="subheading"
+     data-en="Have a question or suggestion? We would love to hear from you."
+     data-hi="कोई सवाल या सुझाव है? हमें बताएं।">
+    Have a question or suggestion? We would love to hear from you.
   </p>
-  <p>
-    Email:
-    <a href="mailto:your@email.com">your@email.com</a>
-  </p>
+
+  <p>Email: your@email.com</p>
+
 </section>
 
 </main>
 
 <footer>
-  <p>© 2026 GYANVEDYA. All rights reserved.</p>
-  <p>Knowledge • Awareness • Growth</p>
+  <p>© 2026 GYANVEDYA</p>
+  <p>Nature • Knowledge • Ayurveda</p>
+  <p>Educational information only. Not a substitute for medical advice.</p>
 </footer>
+
+<script>
+let hindi = false;
+
+function changeLanguage() {
+  hindi = !hindi;
+
+  document.querySelectorAll("[data-en]").forEach(element => {
+    element.textContent = hindi
+      ? element.getAttribute("data-hi")
+      : element.getAttribute("data-en");
+  });
+
+  document.querySelector(".lang-btn").textContent =
+    hindi ? "English" : "हिन्दी";
+}
+
+function searchHerbs() {
+  const query = document.getElementById("herbSearch")
+    .value.toLowerCase().trim();
+
+  const cards = document.querySelectorAll(".herb-card");
+  let count = 0;
+
+  cards.forEach(card => {
+    const matches = card.dataset.name.includes(query);
+    card.classList.toggle("hidden", !matches);
+    if (matches) count++;
+  });
+
+  document.getElementById("noResults")
+    .classList.toggle("hidden", count > 0);
+}
+</script>
 
 </body>
 </html>
